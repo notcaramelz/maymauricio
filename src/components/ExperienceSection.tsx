@@ -6,37 +6,37 @@ export const ExperienceSection = () => {
     title: 'Project Manager',
     company: 'Noah Creatives Agency',
     period: '2025-Present',
-    description: 'Managing creative projects and ensuring timely delivery of quality work.'
+    description: 'Generate qualified leads by identifying churches in need of creative services, initiating outreach through email and social media to present tailored solutions, ensuring all graphic and video content aligns with church branding, and reviewing financial statements to monitor budgets, assess profitability, and support strategic decisions.'
   }, {
     title: 'Unit Manager',
     company: 'Manulife Philippines',
     period: '2025-Present',
-    description: 'Leading a team of financial advisors and managing unit operations.'
+    description: 'Manage and lead a team in delivering high-quality financial services by ensuring operational efficiency, customer satisfaction, and executing strategic initiatives that drive performance aligned with company goals.'
   }, {
     title: 'Unit Head',
     company: 'AXA Philippines',
     period: '2023-2024',
-    description: 'Oversaw team operations and financial advisory services.'
+    description: 'Leading a team to deliver high-quality financial services by ensuring operational efficiency, customer satisfaction, and driving strategic initiatives aligned with company goals.'
   }, {
     title: 'Financial Advisor',
     company: 'Sun Life of Canada',
     period: '2019-2022',
-    description: 'Provided financial planning and advisory services to clients.'
+    description: 'Provide expert financial planning and insurance solutions by analyzing clients’ financial situations, identifying risks, recommending tailored coverage and wealth management strategies, staying updated on market trends, and building long-term client relationships through proactive guidance and personalized service.'
   }, {
     title: 'Branch Manager',
     company: 'CGS Solid Aircon & Ref., Inc.',
     period: '2011-2016',
-    description: 'Managed branch operations, sales, and customer service.'
+    description: 'Oversee daily branch operations and lead a high-performing team to ensure service excellence, utilizing QuickBooks for comprehensive financial management, while driving sales growth, analyzing market trends, and positioning the branch as a leader in car and residential air conditioning solutions.'
   }, {
     title: 'Administrative Assistant',
     company: 'ER Venzon Construction',
     period: '2010-2011',
-    description: 'Provided administrative support to the construction team.'
+    description: 'Provide administrative support by organizing office records, assisting project managers with documentation, sourcing materials and equipment for construction projects, monitoring inventory, tracking purchasing expenses, and helping manage payroll accounts for construction workers.'
   }, {
     title: 'Service Crew',
     company: "McDonald's Balanga",
     period: '2006-2008',
-    description: 'Provided customer service and food preparation.'
+    description: 'Delivered exceptional customer service in a fast-paced dining environment by accurately taking orders, handling transactions, preparing food safely, maintaining cleanliness, resolving issues promptly, and contributing to efficient operations and a positive dining experience through strong communication and teamwork.'
   }];
   const education = [{
     degree: 'Bachelor of Science in Business Administration',
