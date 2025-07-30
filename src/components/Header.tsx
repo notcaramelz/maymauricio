@@ -19,11 +19,13 @@ export const Header = () => {
 
   const navLinks = [
     { name: 'Home', href: '#home' },
+    { name: 'Projects', href: '#projects' }, // ✅ Added Projects link
     { name: 'About', href: '#about' },
     { name: 'Services', href: '#services' },
+    
     { name: 'Experience', href: '#experience' },
     { name: 'Skills', href: '#skills' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Contact', href: '#contact' },
   ];
 
   const handleScrollTo = (href: string) => {
@@ -31,7 +33,7 @@ export const Header = () => {
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsMenuOpen(false); // close mobile menu if open
+    setIsMenuOpen(false); // Close mobile menu
   };
 
   return (

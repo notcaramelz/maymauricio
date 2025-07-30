@@ -1,25 +1,54 @@
 import React from 'react';
 export const SkillsSection = () => {
   const technicalSkills = [{
+    name: 'Sales Force',
+    percentage: 85
+  },{
+    name: 'MailChimp',
+    percentage: 75
+  },{
     name: 'Google Workspace',
     percentage: 95
-  }, {
+  },{
+    name: 'Microsoft Team',
+    percentage: 92
+  },{
     name: 'Microsoft Office',
-    percentage: 90
-  }, {
-    name: 'QuickBooks',
-    percentage: 85
-  }, {
-    name: 'Canva',
-    percentage: 80
-  }, {
+    percentage: 95
+  },{
     name: 'Trello',
-    percentage: 85
-  }, {
-    name: 'Slack',
-    percentage: 80
-  }];
-  const softSkills = ['Organizational skills', 'Analytical thinking', 'Communication', 'Attention to detail', 'Confidentiality', 'Time management', 'Problem solving', 'Adaptability'];
+    percentage: 87
+  }
+  // ,{
+  //   name: 'Discord',
+  //   percentage: 95
+  // },{
+  //   name: 'Slack',
+  //   percentage: 95
+  // },{
+  //   name: 'QuickBooks Desktop and Online',
+  //   percentage: 95
+  // }, {
+  //   name: 'Canva Pro',
+  //   percentage: 94
+  // }, {
+  //   name: 'CapCut',
+  //   percentage: 85
+  // }, {
+  //   name: 'Zoom',
+  //   percentage: 97
+  // }, {
+  //   name: 'Loom',
+  //   percentage: 95
+  // }, {
+  //   name: 'Google Meet',
+  //   percentage: 98
+  // },{
+  //   name: 'ChatGPT',
+  //   percentage: 95
+  // }
+];
+  const softSkills = ['Calendar and Schedule Management', 'Email management and inbox organization', 'Data entry and database management', 'File organization and cloud storage', 'Document preparation and formatting', 'Graphic Design & Video Editing (Shortform)'];
   return <section id="skills" className="py-20 bg-purple-50 w-full">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
@@ -36,7 +65,7 @@ export const SkillsSection = () => {
           {/* Technical Skills */}
           <div>
             <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">
-              Technical Skills
+              Digital Skills
             </h3>
             <div className="space-y-6">
               {technicalSkills.map((skill, index) => <div key={index}>

@@ -3,39 +3,41 @@ import { Briefcase } from 'lucide-react';
 export const ExperienceSection = () => {
   const [activeTab, setActiveTab] = useState('experience');
   const experiences = [{
-    title: 'Project Manager',
-    company: 'Noah Creatives Agency',
-    period: '2025-Present',
-    description: 'Generate qualified leads by identifying churches in need of creative services, initiating outreach through email and social media to present tailored solutions, ensuring all graphic and video content aligns with church branding, and reviewing financial statements to monitor budgets, assess profitability, and support strategic decisions.'
-  }, {
-    title: 'Unit Manager',
-    company: 'Manulife Philippines',
-    period: '2025-Present',
+    title: 'Unit Manager | Licensed Financial Advisor (Part-Time)',
+    company: 'Manulife Philippines | Quezon City, Philippines',
+    period: 'January 2025-Present',
     description: 'Manage and lead a team in delivering high-quality financial services by ensuring operational efficiency, customer satisfaction, and executing strategic initiatives that drive performance aligned with company goals.'
-  }, {
-    title: 'Unit Head',
-    company: 'AXA Philippines',
-    period: '2023-2024',
+
+     }, {
+      title: 'Digital Marketing Specialist (EST)',
+    company: 'NOAH HOME OFFICE | Bataan, Philippines',
+    period: 'June 2024 – June 2025',
+    description: 'Generate qualified leads by identifying churches in need of creative services, initiating outreach through email and social media to present tailored solutions, ensuring all graphic and video content aligns with church branding, and reviewing financial statements to monitor budgets, assess profitability, and support strategic decisions.'
+ 
+     }, {
+    title: 'Unit Head | Licensed Financial Advisor (Part-Time)',
+    company: 'AXA Philippines | Quezon City, Philippines',
+    period: 'January 2023 – January 2025',
     description: 'Leading a team to deliver high-quality financial services by ensuring operational efficiency, customer satisfaction, and driving strategic initiatives aligned with company goals.'
   }, {
-    title: 'Financial Advisor',
-    company: 'Sun Life of Canada',
-    period: '2019-2022',
+    title: 'Licensed Financial Advisor (Part-Time)',
+    company: 'Sunlife of Canada Philippines Inc. | Quezon City, Philippines',
+    period: 'November 2019 – November 2022',
     description: 'Provide expert financial planning and insurance solutions by analyzing clients’ financial situations, identifying risks, recommending tailored coverage and wealth management strategies, staying updated on market trends, and building long-term client relationships through proactive guidance and personalized service.'
   }, {
     title: 'Branch Manager',
-    company: 'CGS Solid Aircon & Ref., Inc.',
-    period: '2011-2016',
+    company: 'CGS Solid Aircon & Ref., Inc. | Bataan, Philippines',
+    period: 'June 2012 – June 2016',
     description: 'Oversee daily branch operations and lead a high-performing team to ensure service excellence, utilizing QuickBooks for comprehensive financial management, while driving sales growth, analyzing market trends, and positioning the branch as a leader in car and residential air conditioning solutions.'
   }, {
-    title: 'Administrative Assistant',
-    company: 'ER Venzon Construction',
-    period: '2010-2011',
+    title: 'Administrative Assistant | Payroll Assistant ',
+    company: 'ER Venzon Construction| Bataan, Philippines',
+    period: 'May 2011 – February 2012',
     description: 'Provide administrative support by organizing office records, assisting project managers with documentation, sourcing materials and equipment for construction projects, monitoring inventory, tracking purchasing expenses, and helping manage payroll accounts for construction workers.'
   }, {
-    title: 'Service Crew',
-    company: "McDonald's Balanga",
-    period: '2006-2008',
+    title: 'Service Crew | Working Student',
+    company: "Mcdonalds Balanga| Bataan, Philippines",
+    period: 'May 2006 – May 2008',
     description: 'Delivered exceptional customer service in a fast-paced dining environment by accurately taking orders, handling transactions, preparing food safely, maintaining cleanliness, resolving issues promptly, and contributing to efficient operations and a positive dining experience through strong communication and teamwork.'
   }];
   const education = [{

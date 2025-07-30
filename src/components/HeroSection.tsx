@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
+
 const titles: string[] = ['Virtual Assistant', 'Project Manager', 'Bookkeeper'];
 
 export const HeroSection: React.FC = () => {
@@ -61,7 +62,7 @@ export const HeroSection: React.FC = () => {
       </div>
 
       <a
-        href="#about"
+        href="#projects"
         className="absolute bottom-8 animate-bounce cursor-pointer"
         aria-label="Scroll to About section"
       >
