@@ -13,6 +13,11 @@ import thumb1 from '../assets/images/th1.png';
 import thumb2 from '../assets/images/th2.png';
 import thumb3 from '../assets/images/th3.png';
 
+import finance1 from '../assets/images/finance1.png';
+import finance2 from '../assets/images/finance2.png';
+import finance3 from '../assets/images/finance3.png';
+
+
 const projects = [
   {
     id: 1,
@@ -56,20 +61,39 @@ const projects = [
     thumbnail: smgdImage,
     videoUrl: '',
   },
+  {
+    id: 7,
+    title: 'Finance Sample 1',
+    category: 'Finance',
+    thumbnail: finance1,
+    videoUrl: '',
+  },
+  {
+    id: 8,
+    title: 'Finance Sample 2',
+    category: 'Finance',
+    thumbnail: finance2,
+    videoUrl: '',
+  },
+  {
+    id: 9,
+    title: 'Finance Sample 3',
+    category: 'Finance',
+    thumbnail: finance3,
+    videoUrl: '',
+  }
 ];
 
-const categories = ['All', 'Reels', 'Graphic Design'];
+const categories = [ 'Reels', 'Graphic Design', 'Finance'];
 
 const ProjectsSection = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const [activeCategory, setActiveCategory] = useState('All');
+  const [activeCategory, setActiveCategory] = useState('Reels');
 
-  const filteredProjects =
-    activeCategory === 'All'
-      ? projects
-      : projects.filter((project) => project.category === activeCategory);
-
+  const filteredProjects = projects.filter(
+    (project) => project.category === activeCategory
+  );
   return (
     <section id="projects" className="py-20 bg-purple-50 w-full">
       <div className="container mx-auto px-4 md:px-6">
@@ -77,7 +101,7 @@ const ProjectsSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">My Projects</h2>
           <div className="w-20 h-1 bg-purple-600 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            A collection of sample videos and graphics that showcase my work in video editing and creative design.
+          A collection of sample videos and graphic designs that showcase my skills in video editing and creative work — along with notable achievements in the finance sector
           </p>
         </div>
 
@@ -130,42 +154,57 @@ const ProjectsSection = () => {
 
         {/* Video Modal */}
         {selectedVideo && (
-          <div className="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4">
-            <div className="relative w-full max-w-3xl">
-              <video
-                src={selectedVideo}
-                controls
-                autoPlay
-                className="w-full rounded-xl"
-              />
-              <button
-                className="absolute top-2 right-2 text-white text-xl"
-                onClick={() => setSelectedVideo(null)}
-              >
-                ✕
-              </button>
-            </div>
-          </div>
-        )}
+  <div
+    className="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4"
+    onClick={() => setSelectedVideo(null)}
+  >
+    <div
+      className="relative w-full max-w-3xl max-h-[90vh]"
+      onClick={(e) => e.stopPropagation()} // Prevents closing when clicking inside
+    >
+      <button
+        className="absolute top-2 right-2 text-white text-3xl z-10"
+        onClick={() => setSelectedVideo(null)}
+      >
+        ✕
+      </button>
+      <video
+        src={selectedVideo}
+        controls
+        autoPlay
+        className="w-full h-auto rounded-xl max-h-[80vh] object-contain"
+      />
+    </div>
+  </div>
+)}
+
+
 
         {/* Image Modal */}
         {selectedImage && (
-          <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4">
-            <div className="relative max-w-3xl w-full">
-              <img
-                src={selectedImage}
-                alt="Full Preview"
-                className="w-full max-h-[80vh] object-contain rounded-xl"
-              />
-              <button
-                className="absolute top-2 right-2 text-white text-xl"
-                onClick={() => setSelectedImage(null)}
-              >
-                ✕
-              </button>
-            </div>
-          </div>
-        )}
+  <div
+    className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4"
+    onClick={() => setSelectedImage(null)}
+  >
+    <div
+      className="relative max-w-3xl w-full"
+      onClick={(e) => e.stopPropagation()} // Prevents closing when clicking inside
+    >
+      <button
+        className="absolute top-2 right-2 text-white text-3xl z-10"
+        onClick={() => setSelectedImage(null)}
+      >
+        ✕
+      </button>
+      <img
+        src={selectedImage}
+        alt="Full Preview"
+        className="w-full max-h-[80vh] object-contain rounded-xl"
+      />
+    </div>
+  </div>
+)}
+
       </div>
     </section>
   );

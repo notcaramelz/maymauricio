@@ -19,11 +19,12 @@ export const Header = () => {
 
   const navLinks = [
     { name: 'Home', href: '#home' },
-    { name: 'Projects', href: '#projects' }, // ✅ Added Projects link
+   
     { name: 'About', href: '#about' },
     { name: 'Services', href: '#services' },
     
     { name: 'Experience', href: '#experience' },
+    { name: 'Projects', href: '#projects' }, // ✅ Added Projects link
     { name: 'Skills', href: '#skills' },
     { name: 'Contact', href: '#contact' },
   ];
