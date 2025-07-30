@@ -113,8 +113,8 @@ const ProjectsSection = () => {
               onClick={() => setActiveCategory(category)}
               className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 activeCategory === category
-                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
-                  : 'bg-white/10 text-purple-700 hover:bg-white/20'
+  ? 'bg-purple-600 text-white'
+  : 'bg-white/10 text-purple-700 hover:bg-white/20'
               }`}
             >
               {category}
