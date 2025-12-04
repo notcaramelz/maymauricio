@@ -3,9 +3,15 @@ import { Briefcase } from 'lucide-react';
 export const ExperienceSection = () => {
   const [activeTab, setActiveTab] = useState('experience');
   const experiences = [{
+    title: 'Virtual Assistant | Financial Modelling & Business Development (Part Time) ',
+    company: 'Elgenia Health Ltd. | Herefordshire HR7 4th, United Kingdom',
+    period: 'October 2025 - Present',
+    description: 'Build the company’s 2026 financial structure by developing accurate projections that ensure long-term stability, preparing clear financial documentation to support fundraising efforts and attract investors, assisting in budgeting and cash-flow monitoring to strengthen overall financial planning, and utilizing Xero Accounting (Xero Level 1 Certified) to generate reports and streamline financial workflows.'
+
+     },{
     title: 'Unit Manager | Licensed Financial Advisor (Part-Time)',
     company: 'Manulife Philippines | Quezon City, Philippines',
-    period: 'January 2025-Present',
+    period: 'January 2025- October 2025',
     description: 'Manage and lead a team in delivering high-quality financial services by ensuring operational efficiency, customer satisfaction, and executing strategic initiatives that drive performance aligned with company goals.'
 
      }, {

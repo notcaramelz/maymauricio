@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import logo from '../assets/images/ligaw.png'; // adjust your path
+
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,7 +26,7 @@ export const Header = () => {
     { name: 'Services', href: '#services' },
     
     { name: 'Experience', href: '#experience' },
-    { name: 'Projects', href: '#projects' }, // ✅ Added Projects link
+    // { name: 'Projects', href: '#projects' }, // ✅ Added Projects link
     { name: 'Skills', href: '#skills' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -41,11 +43,12 @@ export const Header = () => {
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
         <button
-          onClick={() => handleScrollTo('#home')}
-          className="text-2xl font-bold text-purple-700"
-        >
-          May J. Mauricio
-        </button>
+  onClick={() => handleScrollTo('#home')}
+  className="flex items-center gap-2 text-2xl font-bold text-purple-700"
+>
+  <span>May J. Mauricio</span>
+  <img src={logo} alt="Logo" className="w-25 h-20" />
+</button>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
