@@ -27,7 +27,7 @@ export const Header = () => {
     
     { name: 'Experience', href: '#experience' },
     // { name: 'Projects', href: '#projects' }, // ✅ Added Projects link
-    { name: 'Skills', href: '#skills' },
+    // { name: 'Skills', href: '#skills' },
     { name: 'Contact', href: '#contact' },
   ];
 
