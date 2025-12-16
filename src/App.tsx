@@ -3,6 +3,7 @@ import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
 import { AboutSection } from './components/AboutSection';
 import { ServicesSection } from './components/ServicesSection';
+
 // import  ProjectsSection  from './components/ProjectsSection'; // ✅ added
 import { ExperienceSection } from './components/ExperienceSection';
 // import { SkillsSection } from './components/SkillsSection';
@@ -18,6 +19,7 @@ export function App() {
        
         <AboutSection />
         <ServicesSection />
+        
        
         <ExperienceSection />
          {/* <ProjectsSection />  */}

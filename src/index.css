@@ -6,3 +6,22 @@ html {
   scroll-behavior: smooth;
 }
 /* DO NOT DELETE THESE TAILWIND IMPORTS, OTHERWISE THE STYLING WILL NOT RENDER AT ALL */
+
+/* Custom subtle animations for the CompanyLogosSection */
+.logo-floating {
+  animation: floatRotate 12s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes floatRotate {
+  0% { transform: translateY(0px) rotateZ(0.001deg); }
+  25% { transform: translateY(-4px) rotateZ(0.2deg); }
+  50% { transform: translateY(0px) rotateZ(-0.2deg); }
+  75% { transform: translateY(3px) rotateZ(0.1deg); }
+  100% { transform: translateY(0px) rotateZ(0.001deg); }
+}
+
+.logo-card {
+  will-change: transform;
+  backface-visibility: hidden;
+}
