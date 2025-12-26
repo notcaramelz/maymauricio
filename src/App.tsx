@@ -2,6 +2,7 @@ import React from 'react';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
 import { AboutSection } from './components/AboutSection';
+import { CompanyLogosSection } from './components/CompanyLogosSection';
 import { ServicesSection } from './components/ServicesSection';
 
 // import  ProjectsSection  from './components/ProjectsSection'; // ✅ added
@@ -18,6 +19,7 @@ export function App() {
         <HeroSection />
        
         <AboutSection />
+        <CompanyLogosSection />
         <ServicesSection />
         
        

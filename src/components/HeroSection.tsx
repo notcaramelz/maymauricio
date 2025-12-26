@@ -62,7 +62,7 @@ export const HeroSection: React.FC = () => {
       </div>
 
       <a
-        href="#projects"
+        href="#about"
         className="absolute bottom-8 animate-bounce cursor-pointer"
         aria-label="Scroll to About section"
       >
