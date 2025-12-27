@@ -11,7 +11,7 @@ export const ExperienceSection = () => {
      },{
     title: 'Unit Manager | Licensed Financial Advisor (Part-Time)',
     company: 'Manulife Philippines | Quezon City, Philippines',
-    period: 'January 2025- October 2025',
+    period: 'January 2025 - December 2025',
     description: 'Manage and lead a team in delivering high-quality financial services by ensuring operational efficiency, customer satisfaction, and executing strategic initiatives that drive performance aligned with company goals.'
 
      }, {
