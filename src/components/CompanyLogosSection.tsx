@@ -20,7 +20,7 @@ export const CompanyLogosSection = () => {
     { name: 'Sunlife of Canada Philippines Inc.', logo: sunlifeLogo },
     { name: 'CGS Solid Aircon & Ref., Inc.', logo: cgsLogo },
     { name: 'ER Venzon Construction', logo: ervenzonLogo },
-    { name: 'Pelvic Health', logo: pelvicLogo },
+    { name: 'Pelvic Relief', logo: pelvicLogo },
     { name: 'World Changers Corner', logo: wccLogo },
     { name: 'Noah Creatives Agency', logo: ncaLogo },
   ];
