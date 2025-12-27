@@ -50,7 +50,16 @@ export const CompanyLogosSection = () => {
   // Get all slides with their positions for 3D carousel
   const getCarouselSlides = () => {
     return companies.map((company, index) => {
-      const position = (index - currentIndex + companies.length) % companies.length;
+      let position = index - currentIndex;
+      
+      // Normalize position to be between -half and +half of array length
+      const half = Math.floor(companies.length / 2);
+      if (position > half) {
+        position -= companies.length;
+      } else if (position < -half) {
+        position += companies.length;
+      }
+      
       return { ...company, index, position };
     });
   };
@@ -83,9 +92,9 @@ export const CompanyLogosSection = () => {
               let opacity = 0.3;
               if (company.position === 0) {
                 opacity = 1; // Center (active)
-              } else if (company.position === 1 || company.position === companies.length - 1) {
+              } else if (Math.abs(company.position) === 1) {
                 opacity = 0.4; // Immediate left and right
-              } else if (company.position === 2 || company.position === companies.length - 2) {
+              } else if (Math.abs(company.position) === 2) {
                 opacity = 0.2; // Further out
               }
               
