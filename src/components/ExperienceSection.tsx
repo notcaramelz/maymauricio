@@ -37,7 +37,7 @@ export const ExperienceSection = () => {
     description: 'Oversee daily branch operations and lead a high-performing team to ensure service excellence, utilizing QuickBooks for comprehensive financial management, while driving sales growth, analyzing market trends, and positioning the branch as a leader in car and residential air conditioning solutions.'
   }, {
     title: 'Administrative Assistant | Payroll Assistant ',
-    company: 'ER Venzon Construction| Bataan, Philippines',
+    company: 'ER Venzon Construction | Bataan, Philippines',
     period: 'May 2011 – February 2012',
     description: 'Provide administrative support by organizing office records, assisting project managers with documentation, sourcing materials and equipment for construction projects, monitoring inventory, tracking purchasing expenses, and helping manage payroll accounts for construction workers.'
   }, {

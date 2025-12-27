@@ -308,11 +308,11 @@ export const CompanyLogosSection = () => {
         }
 
         .nav-arrow.left {
-          left: -80px;
+          left: 20px;
         }
 
         .nav-arrow.right {
-          right: -80px;
+          right: 20px;
         }
 
         /* Mobile Carousel */
@@ -478,10 +478,14 @@ export const CompanyLogosSection = () => {
         /* Responsive adjustments */
         @media (max-width: 1024px) {
           .nav-arrow.left {
-            left: -30px;
+            left: 10px;
           }
           .nav-arrow.right {
-            right: -30px;
+            right: 10px;
+          }
+          .nav-arrow {
+            width: 50px;
+            height: 50px;
           }
         }
 
