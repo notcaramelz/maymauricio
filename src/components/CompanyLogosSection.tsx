@@ -20,10 +20,10 @@ export const CompanyLogosSection = () => {
     { name: 'Sunlife of Canada Philippines Inc.', logo: sunlifeLogo },
     { name: 'CGS Solid Aircon & Ref., Inc.', logo: cgsLogo },
     { name: 'ER Venzon Construction', logo: ervenzonLogo },
-    { name: 'Pelvic Relief ', logo: pelvicLogo },
+    { name: 'Pelvic Health', logo: pelvicLogo },
     { name: 'World Changers Corner', logo: wccLogo },
     { name: 'Noah Creatives Agency', logo: ncaLogo },
-  ]; 
+  ];
 
   // Auto-scroll with smooth animation
   useEffect(() => {
@@ -79,13 +79,23 @@ export const CompanyLogosSection = () => {
               const angle = (company.position * 360) / companies.length;
               const isActive = company.position === 0;
               
+              // Calculate opacity based on position
+              let opacity = 0.3;
+              if (company.position === 0) {
+                opacity = 1; // Center (active)
+              } else if (company.position === 1 || company.position === companies.length - 1) {
+                opacity = 0.4; // Immediate left and right
+              } else if (company.position === 2 || company.position === companies.length - 2) {
+                opacity = 0.2; // Further out
+              }
+              
               return (
                 <div
                   key={company.index}
                   className="carousel-item"
                   style={{
                     transform: `rotateY(${angle}deg) translateZ(400px)`,
-                    opacity: company.position <= 2 ? 1 : 0.3,
+                    opacity: opacity,
                   }}
                   onClick={() => goToSlide(company.index)}
                 >
