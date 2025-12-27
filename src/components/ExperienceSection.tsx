@@ -42,7 +42,7 @@ export const ExperienceSection = () => {
     description: 'Provide administrative support by organizing office records, assisting project managers with documentation, sourcing materials and equipment for construction projects, monitoring inventory, tracking purchasing expenses, and helping manage payroll accounts for construction workers.'
   }, {
     title: 'Service Crew | Working Student',
-    company: "Mcdonalds Balanga| Bataan, Philippines",
+    company: "Mcdonalds Balanga | Bataan, Philippines",
     period: 'May 2006 – May 2008',
     description: 'Delivered exceptional customer service in a fast-paced dining environment by accurately taking orders, handling transactions, preparing food safely, maintaining cleanliness, resolving issues promptly, and contributing to efficient operations and a positive dining experience through strong communication and teamwork.'
   }];
