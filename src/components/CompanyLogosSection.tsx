@@ -6,6 +6,9 @@ import cgsLogo from '../assets/images/logos/cgs-logo.png';
 import ervenzonLogo from '../assets/images/logos/ervenzon-logo.png';
 import manulifeLogo from '../assets/images/logos/manulife-logo.png';
 import sunlifeLogo from '../assets/images/logos/sunlife-logo.png';
+import pelvicLogo from '../assets/images/logos/pelvic-logo.png';
+import wccLogo from '../assets/images/logos/wcc-logo.png';
+import ncaLogo from '../assets/images/logos/nca-logo.png';
 
 export const CompanyLogosSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -17,7 +20,10 @@ export const CompanyLogosSection = () => {
     { name: 'Sunlife of Canada Philippines Inc.', logo: sunlifeLogo },
     { name: 'CGS Solid Aircon & Ref., Inc.', logo: cgsLogo },
     { name: 'ER Venzon Construction', logo: ervenzonLogo },
-  ];
+    { name: 'Pelvic Relief ', logo: pelvicLogo },
+    { name: 'World Changers Corner', logo: wccLogo },
+    { name: 'Noah Creatives Agency', logo: ncaLogo },
+  ]; 
 
   // Auto-scroll with smooth animation
   useEffect(() => {
