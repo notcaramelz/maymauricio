@@ -23,6 +23,11 @@ import ppt2Pdf from '../assets/images/ppt2.pdf';
 import pptTh2 from '../assets/images/pptth2.jpg';
 import ppt3Pdf from '../assets/images/ppt3.pdf';
 import pptTh3 from '../assets/images/pptth3.jpg';
+
+import cert1 from '../assets/images/cert1.jpg';
+import cert2 from '../assets/images/cert2.jpg';
+import cert3 from '../assets/images/cert3.jpg';
+import cert4 from '../assets/images/cert4.jpg';
 interface Project {
   id: number;
   title: string;
@@ -87,28 +92,56 @@ const projects: Project[] = [
   // FINANCE
   {
     id: 7,
+    title: 'Top 1 Manager AI Certification',
+    category: 'Finance',
+    thumbnail: cert1,
+    type: 'image'
+  },
+  {
+    id: 8,
+    title: 'Xero Certification',
+    category: 'Finance',
+    thumbnail: cert2,
+    type: 'image'
+  },
+  {
+    id: 9,
+    title: 'Bookkeeping & QuickBooks Certification',
+    category: 'Finance',
+    thumbnail: cert3,
+    type: 'image'
+  },
+  {
+    id: 10,
+    title: 'Udemy Basic Bookkeeping Course',
+    category: 'Finance',
+    thumbnail: cert4,
+    type: 'image'
+  },
+  {
+    id: 11,
     title: 'Achievement 1',
     category: 'Finance',
     thumbnail: finance1,
     type: 'image'
   },
   {
-    id: 8,
+    id: 12,
     title: 'Achievement 2',
     category: 'Finance',
     thumbnail: finance2,
     type: 'image'
   },
   {
-    id: 9,
+    id: 13,
     title: 'Achievement 3',
     category: 'Finance',
     thumbnail: finance3,
     type: 'image'
   },
   {
-    id: 10,
-    title: 'Financial Analysis Presentation',
+    id: 14,
+    title: 'Advisor Candidate Presentation',
     category: 'Finance',
     thumbnail: pptTh1,
     type: 'document',
@@ -117,8 +150,8 @@ const projects: Project[] = [
     externalUrl: '' // Optional: Add your Google Drive link
   },
   {
-    id: 11,
-    title: 'Performance Analysis Report',
+    id: 15,
+    title: 'Key Performance Review',
     category: 'Finance',
     thumbnail: pptTh2,
     type: 'document',
@@ -127,7 +160,7 @@ const projects: Project[] = [
     externalUrl: '' // Optional: Add your Google Sheets link
   },
   {
-    id: 13,
+    id: 16,
     title: 'Financial Report Sample',
     category: 'Finance',
     thumbnail: pptTh3,
@@ -190,39 +223,136 @@ const ProjectsSection = () => {
         </div>
 
         {/* Project Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {filteredProjects.map((project) => (
-            <div
-              key={project.id}
-              className="relative group overflow-hidden rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl bg-white cursor-pointer"
-              onClick={() => handleProjectClick(project)}
-            >
-              <div className="relative h-64 overflow-hidden">
-                <img
-                  src={project.thumbnail}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                
-                {/* Overlay Icon based on type */}
-                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  {project.type === 'video' && <Play size={50} strokeWidth={1.5} />}
-                  {(project.type === 'document' || project.type === 'spreadsheet') && (
-                    <FileText size={50} strokeWidth={1.5} />
+        {activeCategory === 'Finance' ? (
+          <div className="space-y-8">
+            {/* Certifications & Achievements */}
+            <div>
+              <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">Certifications & Achievements</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+                {filteredProjects.filter(project => project.type === 'image').map((project) => (
+                  <div
+                    key={project.id}
+                    className="relative group overflow-hidden rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl bg-white cursor-pointer"
+                    onClick={() => handleProjectClick(project)}
+                  >
+                    <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden">
+                      <img
+                        src={project.thumbnail}
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                      
+                      {/* Overlay Icon based on type */}
+                      <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        {project.type === 'video' && <Play size={40} strokeWidth={1.5} />}
+                        {(project.type === 'document' || project.type === 'spreadsheet') && (
+                          <FileText size={40} strokeWidth={1.5} />
+                        )}
+                      </div>
+
+                      {/* Category Badge */}
+                      <div className="absolute top-2 left-2 bg-purple-600 text-white text-xs px-2 py-1 rounded-full font-medium">
+                        {project.category}
+                      </div>
+                    </div>
+
+                    <div className="p-3 md:p-4">
+                      <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-1 line-clamp-2">{project.title}</h3>
+                      {project.description && (
+                        <p className="text-gray-500 text-xs md:text-sm leading-relaxed line-clamp-2">{project.description}</p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Sample Documents */}
+            {filteredProjects.some(project => project.type === 'document' || project.type === 'spreadsheet') && (
+              <div>
+                <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">Sample Documents</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+                  {filteredProjects.filter(project => project.type === 'document' || project.type === 'spreadsheet').map((project) => (
+                    <div
+                      key={project.id}
+                      className="relative group overflow-hidden rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl bg-white cursor-pointer border-2 border-purple-100"
+                      onClick={() => handleProjectClick(project)}
+                    >
+                      <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden">
+                        <img
+                          src={project.thumbnail}
+                          alt={project.title}
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                          loading="lazy"
+                        />
+                        
+                        {/* Overlay Icon based on type */}
+                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          {project.type === 'video' && <Play size={40} strokeWidth={1.5} />}
+                          {(project.type === 'document' || project.type === 'spreadsheet') && (
+                            <FileText size={40} strokeWidth={1.5} />
+                          )}
+                        </div>
+
+                        {/* Category Badge */}
+                        <div className="absolute top-2 left-2 bg-purple-600 text-white text-xs px-2 py-1 rounded-full font-medium">
+                          {project.category}
+                        </div>
+                      </div>
+
+                      <div className="p-3 md:p-4">
+                        <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-1 line-clamp-2">{project.title}</h3>
+                        {project.description && (
+                          <p className="text-gray-500 text-xs md:text-sm leading-relaxed line-clamp-2">{project.description}</p>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+            {filteredProjects.map((project) => (
+              <div
+                key={project.id}
+                className="relative group overflow-hidden rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl bg-white cursor-pointer"
+                onClick={() => handleProjectClick(project)}
+              >
+                <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden">
+                  <img
+                    src={project.thumbnail}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  
+                  {/* Overlay Icon based on type */}
+                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {project.type === 'video' && <Play size={40} strokeWidth={1.5} />}
+                    {(project.type === 'document' || project.type === 'spreadsheet') && (
+                      <FileText size={40} strokeWidth={1.5} />
+                    )}
+                  </div>
+
+                  {/* Category Badge */}
+                  <div className="absolute top-2 left-2 bg-purple-600 text-white text-xs px-2 py-1 rounded-full font-medium">
+                    {project.category}
+                  </div>
+                </div>
+
+                <div className="p-3 md:p-4">
+                  <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-1 line-clamp-2">{project.title}</h3>
+                  {project.description && (
+                    <p className="text-gray-500 text-xs md:text-sm leading-relaxed line-clamp-2">{project.description}</p>
                   )}
                 </div>
               </div>
-
-              <div className="p-4">
-                <h3 className="text-xl font-semibold text-gray-800 mb-1">{project.title}</h3>
-                <p className="text-purple-600 font-medium mb-2">{project.category}</p>
-                {project.description && (
-                  <p className="text-gray-500 text-sm leading-relaxed">{project.description}</p>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
 
         {/* Video Modal */}
         {selectedVideo && (
@@ -231,11 +361,11 @@ const ProjectsSection = () => {
             onClick={() => setSelectedVideo(null)}
           >
             <div
-              className="relative w-full max-w-4xl"
+              className="relative w-full max-w-4xl max-h-[90vh]"
               onClick={(e) => e.stopPropagation()}
             >
               <button
-                className="absolute -top-12 right-0 text-white text-lg hover:text-gray-300 transition-colors"
+                className="absolute -top-12 right-0 text-white text-lg hover:text-gray-300 transition-colors z-10"
                 onClick={() => setSelectedVideo(null)}
               >
                 ✕ Close
@@ -244,7 +374,7 @@ const ProjectsSection = () => {
                 src={selectedVideo}
                 controls
                 autoPlay
-                className="w-full rounded-lg shadow-2xl"
+                className="w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
               />
             </div>
           </div>
