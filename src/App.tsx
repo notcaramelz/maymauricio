@@ -20,11 +20,12 @@ export function App() {
        
         <AboutSection />
         <CompanyLogosSection />
+
         <ServicesSection />
-        
+        { <ProjectsSection />  }
        
         <ExperienceSection />
-         { <ProjectsSection />  }
+         
         {/* <SkillsSection /> */}
         <ContactSection />
       </main>

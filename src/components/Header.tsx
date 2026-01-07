@@ -24,9 +24,9 @@ export const Header = () => {
    
     { name: 'About', href: '#about' },
     { name: 'Services', href: '#services' },
-    
+     { name: 'Projects', href: '#projects' }, // ✅ Added Projects link
     { name: 'Experience', href: '#experience' },
-    { name: 'Projects', href: '#projects' }, // ✅ Added Projects link
+   
     // { name: 'Skills', href: '#skills' },
     { name: 'Contact', href: '#contact' },
   ];
