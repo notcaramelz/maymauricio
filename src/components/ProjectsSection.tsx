@@ -17,6 +17,12 @@ import finance1 from '../assets/images/finance1.png';
 import finance2 from '../assets/images/finance2.png';
 import finance3 from '../assets/images/finance3.png';
 
+import pptPdf from '../assets/images/ppt.pdf';
+import pptTh1 from '../assets/images/pptth1.jpg';
+import ppt2Pdf from '../assets/images/ppt2.pdf';
+import pptTh2 from '../assets/images/pptth2.jpg';
+import ppt3Pdf from '../assets/images/ppt3.pdf';
+import pptTh3 from '../assets/images/pptth3.jpg';
 interface Project {
   id: number;
   title: string;
@@ -81,21 +87,21 @@ const projects: Project[] = [
   // FINANCE
   {
     id: 7,
-    title: 'Financial Analysis Report',
+    title: 'Achievement 1',
     category: 'Finance',
     thumbnail: finance1,
     type: 'image'
   },
   {
     id: 8,
-    title: 'Accounting Template',
+    title: 'Achievement 2',
     category: 'Finance',
     thumbnail: finance2,
     type: 'image'
   },
   {
     id: 9,
-    title: 'Budget Planning Model',
+    title: 'Achievement 3',
     category: 'Finance',
     thumbnail: finance3,
     type: 'image'
@@ -104,32 +110,33 @@ const projects: Project[] = [
     id: 10,
     title: 'Financial Analysis PDF',
     category: 'Finance',
-    thumbnail: finance1,
+    thumbnail: pptTh1,
     type: 'document',
     description: 'Comprehensive financial analysis presentation (PPT converted to PDF)',
-    documentUrl: '#', // Replace with: '../assets/documents/financial-analysis.pdf'
+    documentUrl: pptPdf,
     externalUrl: '' // Optional: Add your Google Drive link
   },
   {
     id: 11,
-    title: 'Accounting Spreadsheet',
+    title: 'Accounting PDF',
     category: 'Finance',
-    thumbnail: finance2,
-    type: 'spreadsheet',
+    thumbnail: pptTh2,
+    type: 'document',
     description: 'Professional accounting spreadsheet template',
-    documentUrl: '#', // Replace with: '../assets/documents/accounting-template.xlsx'
+    documentUrl: ppt2Pdf,
     externalUrl: '' // Optional: Add your Google Sheets link
   },
   {
-    id: 12,
-    title: 'Budget Planning PDF',
+    id: 13,
+    title: 'Additional Finance PDF',
     category: 'Finance',
-    thumbnail: finance3,
+    thumbnail: pptTh3,
     type: 'document',
-    description: 'Strategic budget planning framework',
-    documentUrl: '#', // Replace with: '../assets/documents/budget-planning.pdf'
+    description: 'Additional financial documentation',
+    documentUrl: ppt3Pdf,
     externalUrl: ''
   }
+  
 ];
 
 const categories = ['Reels', 'Graphic Design', 'Finance'];
@@ -250,7 +257,7 @@ const ProjectsSection = () => {
             onClick={() => setSelectedImage(null)}
           >
             <div
-              className="relative max-w-5xl w-full"
+              className="relative max-w-5xl w-full max-h-[90vh]"
               onClick={(e) => e.stopPropagation()}
             >
               <button
@@ -262,7 +269,7 @@ const ProjectsSection = () => {
               <img
                 src={selectedImage}
                 alt="Full Preview"
-                className="w-full rounded-lg shadow-2xl"
+                className="w-full h-auto max-h-[85vh] object-contain rounded-lg shadow-2xl"
               />
             </div>
           </div>
