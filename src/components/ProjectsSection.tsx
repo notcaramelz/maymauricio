@@ -17,7 +17,7 @@ import finance1 from '../assets/images/finance1.png';
 import finance2 from '../assets/images/finance2.png';
 import finance3 from '../assets/images/finance3.png';
 
-import pptPdf from '../assets/images/ppt.pdf';
+import pptPdf from '../assets/images/ppt1.pdf';
 import pptTh1 from '../assets/images/pptth1.jpg';
 import ppt2Pdf from '../assets/images/ppt2.pdf';
 import pptTh2 from '../assets/images/pptth2.jpg';
@@ -108,7 +108,7 @@ const projects: Project[] = [
   },
   {
     id: 10,
-    title: 'Financial Analysis PDF',
+    title: 'Financial Analysis Presentation',
     category: 'Finance',
     thumbnail: pptTh1,
     type: 'document',
@@ -118,7 +118,7 @@ const projects: Project[] = [
   },
   {
     id: 11,
-    title: 'Performance Analysis PDF',
+    title: 'Performance Analysis Report',
     category: 'Finance',
     thumbnail: pptTh2,
     type: 'document',
@@ -128,7 +128,7 @@ const projects: Project[] = [
   },
   {
     id: 13,
-    title: 'Financial Report PDF',
+    title: 'Financial Report Sample',
     category: 'Finance',
     thumbnail: pptTh3,
     type: 'document',
