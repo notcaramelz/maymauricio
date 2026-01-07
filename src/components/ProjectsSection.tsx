@@ -139,7 +139,7 @@ const projects: Project[] = [
   
 ];
 
-const categories = ['Reels', 'Graphic Design', 'Finance'];
+const categories = ['Finance', 'Reels', 'Graphic Design'];
 
 const ProjectsSection = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
@@ -168,7 +168,7 @@ const ProjectsSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">My Projects</h2>
           <div className="w-20 h-1 bg-purple-600 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            A collection of sample videos and graphic designs that showcase my skills in video editing and creative work — along with notable achievements in the finance sector
+            A showcase of notable achievements and sample presentations in the finance sector — along with sample videos and graphic designs that demonstrate skills in video editing and creative work
           </p>
         </div>
 
