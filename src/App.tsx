@@ -5,7 +5,7 @@ import { AboutSection } from './components/AboutSection';
 import { CompanyLogosSection } from './components/CompanyLogosSection';
 import { ServicesSection } from './components/ServicesSection';
 
-// import  ProjectsSection  from './components/ProjectsSection'; // ✅ added
+import  ProjectsSection  from './components/ProjectsSection';
 import { ExperienceSection } from './components/ExperienceSection';
 // import { SkillsSection } from './components/SkillsSection';
 import { ContactSection } from './components/ContactSection';
@@ -24,7 +24,7 @@ export function App() {
         
        
         <ExperienceSection />
-         {/* <ProjectsSection />  */}
+         { <ProjectsSection />  }
         {/* <SkillsSection /> */}
         <ContactSection />
       </main>
