@@ -145,7 +145,7 @@ const ProjectsSection = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [selectedDocument, setSelectedDocument] = useState<Project | null>(null);
-  const [activeCategory, setActiveCategory] = useState('Reels');
+  const [activeCategory, setActiveCategory] = useState('Finance');
 
   const filteredProjects = projects.filter(
     (project) => project.category === activeCategory
