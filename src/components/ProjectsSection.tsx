@@ -112,27 +112,27 @@ const projects: Project[] = [
     category: 'Finance',
     thumbnail: pptTh1,
     type: 'document',
-    description: 'Comprehensive financial analysis presentation (PPT converted to PDF)',
+    description: 'Comprehensive financial analysis presentation pdf',
     documentUrl: pptPdf,
     externalUrl: '' // Optional: Add your Google Drive link
   },
   {
     id: 11,
-    title: 'Accounting PDF',
+    title: 'Performance Analysis PDF',
     category: 'Finance',
     thumbnail: pptTh2,
     type: 'document',
-    description: 'Professional accounting spreadsheet template',
+    description: 'Professional performance analysis pdf for unit meeting',
     documentUrl: ppt2Pdf,
     externalUrl: '' // Optional: Add your Google Sheets link
   },
   {
     id: 13,
-    title: 'Additional Finance PDF',
+    title: 'Financial Report PDF',
     category: 'Finance',
     thumbnail: pptTh3,
     type: 'document',
-    description: 'Additional financial documentation',
+    description: 'Additional financial report sample pdf',
     documentUrl: ppt3Pdf,
     externalUrl: ''
   }
